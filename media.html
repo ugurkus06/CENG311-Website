@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media - Atakan Altun</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    .gallery-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      max-width: 80vw;
+      max-height: 70vh;
+      margin: 20px auto;
+      overflow: hidden;
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    #main-image {
+      width: auto;
+      height: auto;
+      max-width: 90%;
+      max-height: 70vh;
+      object-fit: contain;
+      display: block;
+      margin: auto;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .thumbnail-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .thumbnail:hover {
+      border-color: black;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="media/images/logo.png" alt="Logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="concerts.html">Concerts</a></li>
+        <li><a href="recordings.html">Recordings</a></li>
+        <li><a href="media.html" class="active">Media</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="gallery-container">
+    <button class="prev" onclick="prevImage()">&#10094;</button>
+    <img src="media/images/IMG_1782.JPG" id="main-image">
+    <button class="next" onclick="nextImage()">&#10095;</button>
+  </div>
+  <div class="thumbnail-container">
+    <img src="media/images/IMG_1769.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1769.JPG')">
+    <img src="media/images/IMG_1772.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1772.JPG')">
+    <img src="media/images/IMG_1990.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1990.JPG')">
+    <img src="media/images/IMG_1770.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1770.JPG')">
+    <img src="media/images/IMG_1782.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1782.JPG')">
+  </div>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 Atakan Altun. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/yourhandle" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@atakanaaltun" target="_blank">YouTube</a>
+      <a href="mailto:your@email.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  let images = ["media/images/IMG_1769.JPG", "media/images/IMG_1772.JPG", "media/images/IMG_1990.JPG", "media/images/IMG_1770.JPG", "media/images/IMG_1782.JPG"];
+  let index = 0;
+
+  function changeImage(src) {
+    document.getElementById("main-image").src = src;
+  }
+
+  function prevImage() {
+    index = (index - 1 + images.length) % images.length;
+    document.getElementById("main-image").src = images[index];
+  }
+
+  function nextImage() {
+    index = (index + 1) % images.length;
+    document.getElementById("main-image").src = images[index];
+  }
+</script>
+</body>
+</html>
