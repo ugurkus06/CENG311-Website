@@ -1,0 +1,104 @@
+/* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the header */ /*The header-nav bar and footer styling will be the same for all html files. Only the body will change. */
+header {
+    background-color: white; 
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd; /*Adds a light bottom border */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Flexbox for logo + nav alignment */
+.nav-container {
+    display: flex;
+    align-items: center;  /* Vertically center items */
+    justify-content: space-between; /* Space between logo and nav */
+    max-width: 1200px; /* Limits the width */
+    margin: 0 auto; /* Centers it */
+}
+
+/* Style the logo */
+.logo img {
+    width: 250px;
+    height: auto;
+}
+
+/* Style the navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Space between links */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black; 
+    font-size: 36px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Style the image in index.html */
+#main-image{
+    width: 100vw;  /* Makes the width exactly match the viewport width */
+    height: auto;  /* Keeps the aspect ratio */
+}
+
+/* Style the navigation */
+footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Style the image in about.html */
+#about-image{
+    width: 100vw;  /* Makes the width exactly match the viewport width */
+    height: auto;  /* Keeps the aspect ratio */
+}
+
+/* Style the text in index.html */
+#about-txt{
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
