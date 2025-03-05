@@ -85,6 +85,15 @@ footer {
     text-decoration: underline;
 }
 
+#main-txt{ /* I will probably change these text attributes into a class*/
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
 /* Style the image in about.html */
 #about-image{
     width: 100vw;  /* Makes the width exactly match the viewport width */
@@ -98,7 +107,7 @@ footer {
     margin-top: 40px;
     font-family: 'Rajdhani', sans-serif;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
