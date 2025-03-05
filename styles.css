@@ -100,11 +100,19 @@ footer {
     height: auto;  /* Keeps the aspect ratio */
 }
 
-/* Style the text in index.html */
+/* Style the text in about.html */
 #about-txt{
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+#about-txt2{
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
     font-family: 'Rajdhani', sans-serif;
     font-size: 24px;
     font-weight: 600;
