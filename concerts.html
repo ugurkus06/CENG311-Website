@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recordings - Atakan Altun</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .concerts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .concert-card {
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .concert-card:hover {
+            transform: scale(1.05);
+        }
+
+        .concert-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .concert-card h3 {
+            padding: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="media/images/logo.png" alt="Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="concerts.html">Concerts</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <a href="#" id="lang-tr">TR</a>
+            <a href="#" id="lang-en">EN</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <h1>Recordings</h1>
+    <div class="concerts-container">
+        <div class="concert-card">
+            <img src="media/images/recording1.jpg" alt="Concert 1">
+            <h3>name of recording</h3>
+        </div>
+        <div class="concert-card">
+            <img src="media/images/recording2.jpg" alt="Concert 2">
+            <h3>name of recording</h3>
+        </div>
+        <div class="concert-card">
+            <img src="media/images/recording3.jpg" alt="Concert 3">
+            <h3>name of recording</h3>
+        </div>
+        <div class="concert-card">
+            <img src="media/images/recording4.jpg" alt="Concert 4">
+            <h3>name of recording</h3>
+        </div>
+        <div class="concert-card">
+            <img src="media/images/recording5.jpg" alt="Concert 5">
+            <h3>name of recording</h3>
+        </div>
+        <div class="concert-card">
+            <img src="media/images/recording6.jpg" alt="Concert 6">
+            <h3>name of recording</h3>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 Atakan Altun. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://www.instagram.com/yourhandle" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/@atakanaaltun" target="_blank">YouTube</a>
+            <a href="mailto:your@email.com">Contact</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
+
