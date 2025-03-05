@@ -7,7 +7,7 @@
 
 /* Style the header */ /*The header-nav bar and footer styling will be the same for all html files. Only the body will change. */
 header {
-    background-color: white; 
+    background-color: white;
     padding: 10px 20px;
     border-bottom: 1px solid #ddd; /*Adds a light bottom border */
     position: sticky;
@@ -18,6 +18,7 @@ header {
 
 /* Flexbox for logo + nav alignment */
 .nav-container {
+
     display: flex;
     align-items: center;  /* Vertically center items */
     justify-content: space-between; /* Space between logo and nav */
@@ -44,9 +45,15 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black; 
+    color: black;
     font-size: 36px;
     font-family: 'Bebas Neue', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for navigation */
+nav ul li a:hover {
+    color: #929397; /* Orange highlight on hover */
 }
 
 /* Style the image in index.html */
@@ -79,13 +86,16 @@ footer {
     text-decoration: none;
     margin: 0 10px;
     font-size: 18px;
+    transition: text-decoration 0.3s ease-in-out;
 }
 
+/* Hover effect for footer links */
 .footer-links a:hover {
     text-decoration: underline;
 }
 
-#main-txt{ /* I will probably change these text attributes into a class*/
+/* Style the main text */
+#main-txt {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
@@ -95,21 +105,13 @@ footer {
 }
 
 /* Style the image in about.html */
-#about-image{
+#about-image {
     width: 100vw;  /* Makes the width exactly match the viewport width */
     height: auto;  /* Keeps the aspect ratio */
 }
 
 /* Style the text in about.html */
-#about-txt{
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-}
-#about-txt2{
+#about-txt, #about-txt2 {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
@@ -118,4 +120,29 @@ footer {
     font-weight: 600;
 }
 
+.language-selector {
+    display: flex;
+    gap: 5px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    align-items: center;
+}
 
+.language-selector a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.language-selector a:hover {
+    color: #929397;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
