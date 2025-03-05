@@ -6,77 +6,9 @@
   <title>Media - Atakan Altun</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      text-align: center;
-      font-family: 'Bebas Neue', sans-serif;
-    }
-
-    .gallery-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      max-width: 80vw;
-      max-height: 70vh;
-      margin: 20px auto;
-      overflow: hidden;
-      background-color: #f5f5f5;
-      padding: 10px;
-      border-radius: 10px;
-    }
-
-    #main-image {
-      width: auto;
-      height: auto;
-      max-width: 90%;
-      max-height: 70vh;
-      object-fit: contain;
-      display: block;
-      margin: auto;
-    }
-
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 10;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-    }
-
-    .prev { left: 10px; }
-    .next { right: 10px; }
-
-    .thumbnail-container {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-
-    .thumbnail {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      cursor: pointer;
-      border: 2px solid transparent;
-    }
-
-    .thumbnail:hover {
-      border-color: black;
-    }
-
-  </style>
 </head>
-<body>
+
+<body id="photos-body">
 <header>
   <div class="nav-container">
     <a href="index.html" class="logo">
@@ -86,11 +18,15 @@
       <ul>
         <li><a href="about.html">About</a></li>
         <li><a href="concerts.html">Concerts</a></li>
-        <li><a href="recordings.html">Recordings</a></li>
-        <li><a href="media.html" class="active">Media</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="photos.html">Photos</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="language-selector">
+      <a href="#" id="lang-tr">TR</a>
+      <a href="#" id="lang-en">EN</a>
+    </div>
   </div>
 </header>
 
