@@ -144,6 +144,11 @@ footer {
     font-family: 'Bebas Neue', sans-serif;
 }
 
+.concerts-title{
+    margin-top: 2%;
+    font-size: x-large;
+}
+
 .concerts-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -271,3 +276,60 @@ footer {
     height: 225px;
     border-radius: 10px;
 }
+/* Style contacts*/
+#contact-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  /* Spacing for each <li> (your existing code) */
+  #contact-links li {
+    margin-bottom: 2rem;        /* space between sections */
+    text-align: center;         /* center the content within the list item */
+  }
+  
+ /*Contact List Styling*/
+  #contact-links img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+  
+  /* Form styling */
+  #subscribe-form {
+    margin-top: 1rem;           /* space above form to separate it from the text */
+    display: flex;
+    flex-direction: column;     /* stack label, input, and button vertically */
+    align-items: center;        /* center them horizontally */
+  }
+  
+  /* Label and input styling */
+  #subscribe-form label {
+    margin-bottom: 0.5rem;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  #subscribe-form input {
+    padding: 0.5rem;
+    font-size: 16px;
+    margin-bottom: 1rem;        /* space below input before button */
+    width: 200px;               /* set a fixed width, or use 100% if you prefer */
+  }
+  
+  /* Button styling */
+  #subscribe-form button {
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+  }

@@ -4,41 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Atakan Altun</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      text-align: center;
-      font-family: 'Bebas Neue', sans-serif;
-    }
-
-    .contact-container {
-      max-width: 800px;
-      margin: 50px auto;
-      text-align: center;
-    }
-
-    .contact-header {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    .contact-info {
-      font-size: 20px;
-      line-height: 1.6;
-    }
-
-    .contact-logo img {
-      width: 120px;
-      margin: 20px 0;
-    }
-
-    .footer-links {
-      margin-top: 30px;
-      font-size: 14px;
-    }
-  </style>
 </head>
+
 <body>
 <header>
   <div class="nav-container">
@@ -62,29 +31,48 @@
 </header>
 
 <main>
-  <div class="contact-container">
-    <h2 class="contact-header">General Management</h2>
-    <div class="contact-logo">
-      <img src="media/images/logohere.png" alt="Logo png here">
-    </div>
-    <div class="contact-info">
-      <p><strong>John Doe</strong><br>Senior Artist Manager<br>+44 20 1234 5678<br>
-        <a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
-      <p><strong>Jane Smith</strong><br>Associate Artist Manager<br>+44 20 8765 4321<br>
-        <a href="mailto:janesmith@example.com">janesmith@example.com</a></p>
-    </div>
-  </div>
+  <ul id="contact-links">
+    <li><a href="https://www.youtube.com/@atakanaaltun" target="_blank">
+      <img src="media/images/youtubeLogo.png"></a>
+      <p>Youtube</p>
+    </li>
+    
+    <li><a href="https://www.instagram.com/atakanaaltun/?igsh=ejdnYmxxNWtubjEx&utm_source=qr#" target="_blank">
+      <img src="media/images/instaLogo.png"></a>
+      <p>Instagram</p>
+    </li>
+    
+    <li>
+      <img src="media/images/mailLogo2.png">
+      
+      <p>Get News About Upcoming Concerts</p>
+      
+      <form id="subscribe-form" action="#" method="post">
+        
+        <label for="email-input">Email:</label>
+        <input 
+          type="email" 
+          id="email-input" 
+          name="email" 
+          placeholder="Enter your email"
+          required 
+        />
+        <button type="submit">Subscribe</button>
+      
+      </form>
+    </li>
+    
+  </ul>
 </main>
 
 <footer>
   <div class="footer-container">
-    <p>&copy; 2025 Atakan Altun. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="#">Imprint</a> |
-      <a href="#">Privacy Policy</a> |
-      Photos by Julia Wesely |
-      Website by Sforzato
-    </div>
+      <p>&copy; 2025 Atakan Altun. All rights reserved.</p>
+      <div class="footer-links">
+          <a href="https://www.instagram.com/yourhandle" target="_blank">Instagram</a> <!-- Some of these links are placeholders.-->
+          <a href="https://www.youtube.com/@atakanaaltun" target="_blank">YouTube</a>
+          <a href="mailto:aatakanaltun@gmail.com">Contact Me</a> 
+      </div>
   </div>
 </footer>
 </body>
