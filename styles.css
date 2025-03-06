@@ -5,7 +5,8 @@
     box-sizing: border-box;
 }
 
-/* Style the header */ /*The header-nav bar and footer styling will be the same for all html files. Only the body will change. */
+/* ================= Header and Navigation Styling ================= */
+/* Style the header for all pages */
 header {
     background-color: white;
     padding: 10px 20px;
@@ -16,7 +17,7 @@ header {
     z-index: 1000;
 }
 
-/* Flexbox for logo + nav alignment */
+/* Container to align logo and navigation properly */
 .nav-container {
 
     display: flex;
@@ -57,13 +58,17 @@ nav ul li a:hover {
     color: #929397; /* Orange highlight on hover */
 }
 
+/* ================= Index Page Styling ================= */
+
 /* Style the image in index.html */
 #index-image{
     width: 100vw;  /* Makes the width exactly match the viewport width */
     height: auto;  /* Keeps the aspect ratio */
 }
 
-/* Style the navigation */
+
+/* ================= Footer Styling ================= */
+
 footer {
     background-color: white;
     color: black;
@@ -95,7 +100,7 @@ footer {
     text-decoration: underline;
 }
 
-/* Style the main text */
+/* ================= Main Page Styling ================= */
 #main-txt {
     text-align: center;
     padding: 20px;
@@ -105,7 +110,7 @@ footer {
     font-weight: 600;
 }
 
-/* Style the image in about.html */
+/* ================= About Page Styling ================= */
 #about-image {
     width: 100vw;  /* Makes the width exactly match the viewport width */
     height: auto;  /* Keeps the aspect ratio */
@@ -120,7 +125,7 @@ footer {
     font-size: 24px;
     font-weight: 600;
 }
-
+/* ================= Language Selector Styling ================= */
 .language-selector {
     display: flex;
     gap: 5px;
@@ -141,6 +146,7 @@ footer {
     color: #929397;
 }
 
+/* ================= Concerts Page Styling ================= */
 #concert-body {
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;
@@ -159,7 +165,7 @@ footer {
     margin: 40px auto;
     padding: 20px;
 }
-
+/* Styling for individual concert cards */
 .concert-card {
     background-color: #f5f5f5;
     border-radius: 10px;
@@ -167,7 +173,7 @@ footer {
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
-
+/* Hover effect for concert cards */
 .concert-card:hover {
     transform: scale(1.05);
 }
@@ -182,12 +188,12 @@ footer {
     font-size: 18px;
     color: #333;
 }
-
+/* ================= Photos Page Styling ================= */
 #photos-body {
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;
   }
-
+/* Main gallery container */
 .gallery-container {
     display: flex;
     align-items: center;
@@ -211,7 +217,7 @@ footer {
     display: block;
     margin: auto;
 }
-
+/* Navigation buttons for gallery */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -260,7 +266,7 @@ footer {
     font-family: 'Bebas Neue', sans-serif;
   }
 
-  /* Video Gallery Styling */
+/* ================= Videos Page Styling ================= */
 .video-gallery {
     margin-top: 40px;
     padding: 20px;
@@ -278,7 +284,8 @@ footer {
     height: 225px;
     border-radius: 10px;
 }
-/* Style contacts*/
+/* ================= Contacts Page Styling ================= */
+
 #contact-links {
     list-style: none;
     margin: 0;
@@ -292,7 +299,7 @@ footer {
     font-weight: 600;
   }
   
-  /* Spacing for each <li> (your existing code) */
+  /* Spacing for each <li> */
   #contact-links li {
     margin-bottom: 2rem;        /* space between sections */
     text-align: center;         /* center the content within the list item */

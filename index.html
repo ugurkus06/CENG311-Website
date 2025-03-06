@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATAKAN ALTUN</title>
+    <title>Atakan Altun</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="media/images/favicon.ico">
 </head>
 <body>
 <header>
+     <!-- 
+            Wrapper for the site logo, main navigation menu, 
+            and language selector.
+        -->
     <div class="nav-container">
+         <!-- 
+                Clicking the logo returns visitors to the homepage.
+                'alt' text aids accessibility and SEO.
+            -->
         <a href="index.html" class="logo">
             <img src="media/images/logo.png" alt="Logo">
         </a>
+         <!-- 
+                The primary navigation menu with links to the 
+                site's different sections (About, Concerts, etc.).
+            -->
         <nav>
             <ul>
                 <li><a href="about.html">About</a></li>
@@ -21,26 +34,44 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+         <!-- 
+                Language selection links. Functionality for actual 
+                language switching can be implemented via JavaScript.
+            -->
         <div class="language-selector">
             <a href="#" id="lang-tr">TR</a>
             <a href="#" id="lang-en">EN</a>
         </div>
     </div>
 </header>
-    
+  <!-- 
+        The main section includes a featured image and a brief introduction
+        about the artist, highlighting achievements and background.
+    -->
     <main>
+        <!-- 
+            A key image to showcase Atakan Altun. 
+            Styling is handled by the ID 'index-image' in CSS.
+        -->
         <img src="media/images/IMG_1318.JPG" id ="index-image">
         <br>
     <!--<p id="main-txt">Atakan Altun, genç yaşına rağmen uluslararası sahnede kendini kanıtlamış bir kontrabas sanatçısıdır. Solo performansları, prestijli orkestralarla olan iş birlikleri ve kazandığı uluslararası ödüllerle adını duyuran Altun, müzikal ifadesindeki derinlik ve teknik ustalığıyla dikkat çekmektedir. Sanat hayatına Hacettepe Üniversitesi Ankara Devlet Konservatuvarı’nda başlayan sanatçı, eğitimine Prof. Dr. Burak Karaağaç ile devam etmektedir.</p>
+        old code-->
+      <!-- 
+            Paragraph displaying the artist's summary biography and 
+            current studies.
         -->
         <p id="main-txt">Atakan Altun, despite his young age, has proven himself on the international stage as a double bass artist. He has made a name for himself through his solo performances, collaborations with prestigious orchestras, and the international awards he has received. Noted for the depth of his musical expression and technical mastery, he began his artistic journey at Hacettepe University Ankara State Conservatory and continues his studies under Prof. Dr. Burak Karaağaç.</p>
     </main>
-
+     <!-- 
+        The footer contains links to social media profiles and
+        an email contact, plus a copyright notice.
+    -->
     <footer>
         <div class="footer-container">
             <p>&copy; 2025 Atakan Altun. All rights reserved.</p>
             <div class="footer-links">
-                <a href="https://www.instagram.com/yourhandle" target="_blank">Instagram</a> <!-- Some of these links are placeholders.-->
+                <a href="https://www.instagram.com/atakanaaltun/?igsh=ejdnYmxxNWtubjEx&utm_source=qr#" target="_blank">Instagram</a>
                 <a href="https://www.youtube.com/@atakanaaltun" target="_blank">YouTube</a>
                 <a href="mailto:aatakanaltun@gmail.com">Contact Me</a> 
             </div>
