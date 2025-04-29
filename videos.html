@@ -1,18 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recordings - Atakan Altun</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick Carousel JS -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="videos.js"></script>
 </head>
+
 <body id="videos-body">
+
 <header>
   <div class="nav-container">
     <a href="index.html" class="logo">
-      <img src="media/images/logo.png" alt="Logo">
+      <img src="media/images/logo.png" alt="Logo" />
     </a>
     <nav>
       <ul>
@@ -31,14 +48,18 @@
 </header>
 
 <main>
-
-  <!-- Video Gallery Section -->
   <section class="video-gallery">
     <h2>Featured Videos</h2>
-    <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/R5E2pN09fCk?si=VNRAZxEr1JpX2A7b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/U6Sns3NiIWM?si=8D5ORDj_AwotNM7t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/9QcucM6jaCk?si=prZXiiZTw5HS6PUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="video-slider">
+      <div>
+        <iframe src="https://www.youtube.com/embed/R5E2pN09fCk?si=VNRAZxEr1JpX2A7b" allowfullscreen></iframe>
+      </div>
+      <div>
+        <iframe src="https://www.youtube.com/embed/U6Sns3NiIWM?si=8D5ORDj_AwotNM7t" allowfullscreen></iframe>
+      </div>
+      <div>
+        <iframe src="https://www.youtube.com/embed/9QcucM6jaCk?si=prZXiiZTw5HS6PUA" allowfullscreen></iframe>
+      </div>
     </div>
   </section>
 </main>
@@ -53,7 +74,8 @@
     </div>
   </div>
 </footer>
+
+
+
 </body>
 </html>
-
-
