@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Atakan Altun</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- jQuery UI CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css"/>
+
   <style>
     body {
       text-align: center;
@@ -33,6 +41,10 @@
       margin: 20px 0;
     }
 
+    #dialog-message {
+      font-size: 18px;
+    }
+
     .footer-links {
       margin-top: 30px;
       font-size: 14px;
@@ -40,6 +52,7 @@
   </style>
 </head>
 <body>
+
 <header>
   <div class="nav-container">
     <a href="index.html" class="logo">
@@ -64,19 +77,22 @@
 <main>
   <div class="contact-container">
     <h2 class="contact-header">General Management</h2>
+
     <div class="contact-logo">
-      <img src="media/images/logohere.png" alt="Logo png here">
+      <img src="media/images/logohere.png" alt="Logo here">
     </div>
+
     <div class="contact-info">
       <p><strong>John Doe</strong><br>Senior Artist Manager<br>+44 20 1234 5678<br>
         <a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
       <p><strong>Jane Smith</strong><br>Associate Artist Manager<br>+44 20 8765 4321<br>
         <a href="mailto:janesmith@example.com">janesmith@example.com</a></p>
     </div>
-   
 
+    <!-- Contact Form -->
     <form id="contact-form">
       <h3>Contact Us</h3>
+
       <label for="name">Name:</label><br>
       <input type="text" id="name" name="name" required><br><br>
 
@@ -89,8 +105,10 @@
       <button type="submit">Send</button>
     </form>
 
-    <div id="form-response" style="margin-top: 20px; font-size: 18px;"></div>
-
+    <!-- jQuery UI Dialog -->
+    <div id="dialog" title="Message Sent" style="display:none;">
+      <p id="dialog-message"></p>
+    </div>
   </div>
 </main>
 
@@ -105,5 +123,13 @@
     </div>
   </div>
 </footer>
+
+<!-- jQuery and jQuery UI -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+<!-- Your Script -->
+<script src="contact.js"></script>
+
 </body>
 </html>

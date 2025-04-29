@@ -1,27 +1,41 @@
-
 $(document).ready(function () {
+    $("#dialog").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons: {
+            OK: function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
     $("#contact-form").on("submit", function (e) {
-        e.preventDefault(); // Sayfanın yeniden yüklenmesini engeller
+        e.preventDefault();
 
         const name = $("#name").val().trim();
         const email = $("#email").val().trim();
         const message = $("#message").val().trim();
-
-        // check empty
-        if (!name || !email || !message) {
-            $("#form-response").text("Please fill out all fields.");
-            return;
-        }
-
-        // check format
         const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+        // check
+        if (!name) {
+            $("#name").effect("shake");
+            return;
+        }
         if (!emailPattern.test(email)) {
-            $("#form-response").text("Please enter a valid email address.");
+            $("#email").effect("shake");
+            return;
+        }
+        if (!message) {
+            $("#message").effect("shake");
             return;
         }
 
-        // successful
-        $("#form-response").html(`Thank you <strong>${name}</strong>, we will get back to you at <strong>${email}</strong> soon!`);
-        $("#contact-form")[0].reset(); // reset
+        // successful pop
+        $("#dialog-message").html(`Thank you <strong>${name}</strong>, we will get back to you at <strong>${email}</strong> soon!`);
+        $("#dialog").dialog("open");
+
+        // reset
+        $("#contact-form")[0].reset();
     });
 });
