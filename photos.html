@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Media - Atakan Altun</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- LightSlider CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightslider@1.1.6/dist/css/lightslider.min.css" />
+
+  <!-- jQuery (önce) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- LightSlider JS (sonra) -->
+  <script src="https://cdn.jsdelivr.net/npm/lightslider@1.1.6/dist/js/lightslider.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      text-align: center;
+    }
+
+    #imageGallery {
+      width: 80%;
+      margin: 50px auto;
+    }
+
+    #imageGallery li img {
+      width: 100%;
+      display: block;
+    }
+
+    .footer-links {
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body id="photos-body">
@@ -31,18 +66,23 @@
 </header>
 
 <main>
-  <div class="gallery-container">
-    <button class="prev" onclick="prevImage()">&#10094;</button>
-    <img src="media/images/IMG_1782.JPG" id="main-image">
-    <button class="next" onclick="nextImage()">&#10095;</button>
-  </div>
-  <div class="thumbnail-container">
-    <img src="media/images/IMG_1769.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1769.JPG')">
-    <img src="media/images/IMG_1772.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1772.JPG')">
-    <img src="media/images/IMG_1990.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1990.JPG')">
-    <img src="media/images/IMG_1770.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1770.JPG')">
-    <img src="media/images/IMG_1782.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1782.JPG')">
-  </div>
+  <ul id="imageGallery">
+    <li data-thumb="media/images/IMG_1769.JPG">
+      <img src="media/images/IMG_1769.JPG" />
+    </li>
+    <li data-thumb="media/images/IMG_1772.JPG">
+      <img src="media/images/IMG_1772.JPG" />
+    </li>
+    <li data-thumb="media/images/IMG_1990.JPG">
+      <img src="media/images/IMG_1990.JPG" />
+    </li>
+    <li data-thumb="media/images/IMG_1770.JPG">
+      <img src="media/images/IMG_1770.JPG" />
+    </li>
+    <li data-thumb="media/images/IMG_1782.JPG">
+      <img src="media/images/IMG_1782.JPG" />
+    </li>
+  </ul>
 </main>
 
 <footer>
@@ -56,23 +96,12 @@
   </div>
 </footer>
 
-<script>
-  let images = ["media/images/IMG_1769.JPG", "media/images/IMG_1772.JPG", "media/images/IMG_1990.JPG", "media/images/IMG_1770.JPG", "media/images/IMG_1782.JPG"];
-  let index = 0;
+<!-- jQuery + LightSlider -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightslider@1.1.6/dist/js/lightslider.min.js"></script>
 
-  function changeImage(src) {
-    document.getElementById("main-image").src = src;
-  }
+<!-- Custom JS -->
+<script src="photos.js"></script>
 
-  function prevImage() {
-    index = (index - 1 + images.length) % images.length;
-    document.getElementById("main-image").src = images[index];
-  }
-
-  function nextImage() {
-    index = (index + 1) % images.length;
-    document.getElementById("main-image").src = images[index];
-  }
-</script>
 </body>
 </html>
