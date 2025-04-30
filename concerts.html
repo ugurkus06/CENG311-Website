@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atakan Altun</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+     <!-- jQuery UI CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="media/images/favicon.ico">
 </head>
@@ -17,11 +19,11 @@
         </a>
         <nav>
             <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="concerts.html">Concerts</a></li>
-                <li><a href="videos.html">Videos</a></li>
-                <li><a href="photos.html">Photos</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html" id="about-text">About</a></li>
+                <li><a href="concerts.html" id="concerts-text">Concerts</a></li>
+                <li><a href="videos.html" id="videos-text">Videos</a></li>
+                <li><a href="photos.html" id="photos-text">Photos</a></li>
+                <li><a href="contact.html" id="contact-text">Contact</a></li>
             </ul>
         </nav>
         <div class="language-selector">
@@ -32,10 +34,10 @@
 </header>
 
 <main>
-    <p class="concerts-title">Upcoming Concerts</p>
+    <p class="concerts-title" id="upcoming-concerts">Upcoming Concerts</p>
     <div class="concerts-container">
         <!-- Concert Cards for Upcoming Concerts -->
-        <div class="concert-card">
+        <div class="concert-card" id="uc1">
             <p>May 10, 2025 <br><br>
                 Ankara - CSO Ada Bankkart Blue Hall <br><br>
                 Nikolai Rimsky-Korsakov - Scheherazade (for Double Bass and Piano) <br><br>
@@ -45,7 +47,7 @@
                 Assoc. Prof. Dr. Sibel Sarıcan Gündüz </p>
         </div>
         
-        <div class="concert-card">
+        <div class="concert-card" id="uc2">
             <p>May 16, 2025 <br><br>
                 İzmir - Ahmet Adnan Saygun Arts Center, Grand Hall<br><br>
                 Serge Koussevitzky - F# Minor Double Bass Concerto, Op. 3<br><br>
@@ -54,17 +56,17 @@
         </div>
     </div>
 
-    <p class="concerts-title">Previous Concerts</p>
+    <p class="concerts-title" id="previous-concerts">Previous Concerts</p>
     <div class="concerts-container">
         <!-- Concert Cards for Previous Concerts -->
-        <div class="concert-card">
+        <div class="concert-card" id="pc1">
             <p>May 17, 2024 <br><br>
                 Adana - Adana Metropolitan Municipality Theatre Hall<br><br>
                 Serge Koussevitzky - F# Minor Double Bass Concerto, Op. 3<br><br>
                 Çukurova State Symphony Orchestra <br><br>
                 Conductor: Eray İnal</p>
         </div>
-        <div class="concert-card">
+        <div class="concert-card" id="pc2">
             <p>December 26, 2023 <br><br>
                 Ankara - Hacettepe University Ankara State Conservatory Recital Hall <br><br>
                 Hans Fryba - Suite in Olden Style <br><br>
@@ -72,7 +74,7 @@
                 Piano: Assoc. Prof. Dr. Sibel Sarıcan Gündüz
             </p>
         </div>
-        <div class="concert-card">
+        <div class="concert-card" id="pc3">
             <p>November 30, 2023 <br><br>
                 Ankara - Hacettepe University Ankara State Conservatory Concert Hall <br><br>
                 Serge Koussevitzky - F# Minor Double Bass Concerto, Op. 3 <br><br>
@@ -85,14 +87,18 @@
 
 <footer>
     <div class="footer-container">
-        <p>&copy; 2025 Atakan Altun. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="https://www.instagram.com/atakanaaltun/?igsh=ejdnYmxxNWtubjEx&utm_source=qr#" target="_blank">Instagram</a> <!-- Some of these links are placeholders.-->
-            <a href="https://www.youtube.com/@atakanaaltun" target="_blank">YouTube</a>
-            <a href="mailto:aatakanaltun@gmail.com">Contact Me</a> 
+        <p id="footer-tm">&copy; 2025 Atakan Altun. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/atakanaaltun/?igsh=ejdnYmxxNWtubjEx&utm_source=qr#" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/@atakanaaltun" target="_blank">YouTube</a>
+                <a href="mailto:aatakanaltun@gmail.com" id="contact-text-footer">Contact Me</a> 
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="conserts.js"></script>
 </body>
 </html>
 

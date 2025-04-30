@@ -19,11 +19,11 @@
     </a>
     <nav>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="concerts.html">Concerts</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="photos.html">Photos</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" id="about-text">About</a></li>
+        <li><a href="concerts.html" id="concerts-text">Concerts</a></li>
+        <li><a href="videos.html" id="videos-text">Videos</a></li>
+        <li><a href="photos.html" id="photos-text">Photos</a></li>
+        <li><a href="contact.html" id="contact-text">Contact</a></li>
       </ul>
     </nav>
     <div class="language-selector">
@@ -49,21 +49,21 @@
     <!-- Newsletter subscription section -->
     <li>
       <img src="media/images/mailLogo2.png">
-      <p>Contact Us</p>
+      <p id="contact-me-logo">Contact Me</p>
        <!-- Contact Form -->
     <form id="contact-form">
       
 
-      <label for="name">Name:</label><br>
+      <label for="name" id="label-name">Name:</label><br>
       <input type="text" id="name" name="name" required><br><br>
 
-      <label for="email">Email:</label><br>
+      <label for="email" id="label-email">Email:</label><br>
       <input type="email" id="email" name="email" required><br><br>
 
-      <label for="message">Your Message:</label><br>
+      <label for="message" id="label-message">Your Message:</label><br>
       <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-      <button type="submit">Send</button>
+      <button type="submit" id="send-button">Send</button>
     </form>
     </li>
     
@@ -78,11 +78,11 @@
 
 <footer>
   <div class="footer-container">
-      <p>&copy; 2025 Atakan Altun. All rights reserved.</p>
+      <p id="footer-tm">&copy; 2025 Atakan Altun. All rights reserved.</p>
       <div class="footer-links">
-          <a href="https://www.instagram.com/atakanaaltun/?igsh=ejdnYmxxNWtubjEx&utm_source=qr#" target="_blank">Instagram</a> <!-- Some of these links are placeholders.-->
+          <a href="https://www.instagram.com/atakanaaltun/?igsh=ejdnYmxxNWtubjEx&utm_source=qr#" target="_blank">Instagram</a>
           <a href="https://www.youtube.com/@atakanaaltun" target="_blank">YouTube</a>
-          <a href="mailto:aatakanaltun@gmail.com">Contact Me</a> 
+          <a href="mailto:aatakanaltun@gmail.com" id="contact-text-footer">Contact Me</a> 
       </div>
   </div>
 </footer>

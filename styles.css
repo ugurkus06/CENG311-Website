@@ -39,7 +39,6 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px; /* Space between links */
-    margin-left: 15%;
 }
 
 nav ul li {

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atakan Altun</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+     <!-- jQuery UI CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="media/images/favicon.ico">
 </head>
@@ -16,11 +18,11 @@
         </a>
         <nav>
             <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="concerts.html">Concerts</a></li>
-                <li><a href="videos.html">Videos</a></li>
-                <li><a href="photos.html">Photos</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html" id="about-text">About</a></li>
+                <li><a href="concerts.html" id="concerts-text">Concerts</a></li>
+                <li><a href="videos.html" id="videos-text">Videos</a></li>
+                <li><a href="photos.html" id="photos-text">Photos</a></li>
+                <li><a href="contact.html" id="contact-text">Contact</a></li>
             </ul>
         </nav>
         <div class="language-selector">
@@ -35,7 +37,6 @@
         <p id="about-txt"><strong>ATAKAN ALTUN (2003) – Double Bass Artist</strong> <br><br>
 
             Atakan Altun is a double bass artist who has achieved significant success on national and international stages despite his young age. In 2013, he passed the entrance exam of Hacettepe University Ankara State Conservatory and began his double bass education with <strong>Prof. Dr. Burak Karaağaç</strong>. With his technical proficiency and musical expression, he quickly gained attention and had the opportunity to perform as a soloist with some of Turkey's leading orchestras. <br><br>
--- Ima
             <strong>National and International Awards</strong> <br><br>
 
             In 2023, Altun won both the <strong>1st prize</strong> and the <strong>Grzegorz Olkiewicz Grand Prix</strong>, the highest award of the competition, at the <strong>International Grzegorz Olkiewicz Double Bass Competition</strong> held in Poland. <br><br>
@@ -86,13 +87,17 @@
 
     <footer>
         <div class="footer-container">
-            <p>&copy; 2025 Atakan Altun. All rights reserved.</p>
+            <p id="footer-tm">&copy; 2025 Atakan Altun. All rights reserved.</p>
             <div class="footer-links">
-                <a href="https://www.instagram.com/atakanaaltun/?igsh=ejdnYmxxNWtubjEx&utm_source=qr#" target="_blank">Instagram</a> <!-- Some of these links are placeholders.-->
+                <a href="https://www.instagram.com/atakanaaltun/?igsh=ejdnYmxxNWtubjEx&utm_source=qr#" target="_blank">Instagram</a>
                 <a href="https://www.youtube.com/@atakanaaltun" target="_blank">YouTube</a>
-                <a href="mailto:aatakanaltun@gmail.com">Contact Me</a> 
+                <a href="mailto:aatakanaltun@gmail.com" id="contact-text-footer">Contact Me</a> 
             </div>
         </div>
     </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="about.js"></script>
 </body>
 </html>
