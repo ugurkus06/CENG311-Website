@@ -13,8 +13,8 @@ $(function() {
   
       // Language-specific text logic
       if (lang === "lang-tr") {
-        $("#upcoming-conserts").text("Gelecek Konserler");
-        $("#previous-conserts").text("Geçmiş Konserler");
+        $("#upcoming-concerts").text("Gelecek Konserler");
+        $("#previous-concerts").text("Geçmiş Konserler");
         $("#uc1").html(`<p>10 Mayıs 2025 <br><br>
         Ankara - CSO Ada Bankkart Mavi Salon <br><br>
         Nikolai Rimsky-Korsakov - Şehrazat (Kontrbas ve Piyano için) <br><br>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atakan Altun</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+   <!-- Slick Carousel CSS -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+   <!-- jQuery UI CSS -->
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="media/images/favicon.ico">
 </head>
 <body id="videos-body">
@@ -32,30 +36,63 @@
 </header>
 
 <main>
-
-  <!-- Video Gallery Section -->
   <section class="video-gallery">
-    <p class="concerts-title">Featured Videos</p> <br>
-    <div class="video-container">
-      <!-- Embedded YouTube videos -->
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/R5E2pN09fCk?si=VNRAZxEr1JpX2A7b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/U6Sns3NiIWM?si=8D5ORDj_AwotNM7t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/9QcucM6jaCk?si=prZXiiZTw5HS6PUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2 id="videos-title">Featured Videos</h2>
+    <div class="video-slider">
+      <div>
+        <iframe src="https://www.youtube.com/embed/_kbo0Pt38jM?si=mHoMgfzJWTA2ut7F" allowfullscreen></iframe>
+      </div>
+      <div>
+        <iframe src="https://www.youtube.com/embed/ik7fXQt8yhs?si=ITt59tCIpcAeKnJ3" allowfullscreen></iframe>
+      </div>
+      <div>
+        <iframe src="https://www.youtube.com/embed/9QcucM6jaCk?si=prZXiiZTw5HS6PUA" allowfullscreen></iframe>
+      </div>
     </div>
+
+    <div id="video-descriptions" style="margin-top: 20px;">
+      <div class="video-desc" data-index="0" id="desc1">
+        <p>Atakan Altun - S. Koussevitzky Doublebass Concerto in F# Minor (1st and 2nd movements) <br>
+          Hacettepe University Symphony Orchestra <br>
+          Conductor: Bahadır Çokomay <br>
+          Doublebass: Atakan Altun <br>
+          30.11.2023</p>
+      </div>
+      <div class="video-desc" data-index="1" style="display:none;" id="desc2">
+        <p>R. Gliere - Tarantella<br></p>
+        Atakan Altun - Doublebass<br>
+        Evrim Turan - Piano
+      </div>
+      <div class="video-desc" data-index="2" style="display:none;" id="desc3">
+        <p>Atakan Altun, Efil Özdemir Bottesini Doublebass Clarinet Gran Duo. <br></p>
+        Doublebass: Atakan ALTUN <br>
+        Clarinet: Efil ÖZDEMİR <br>
+        Hacettepe Youth Symphony Orchestra
+      </div>
+    </div>
+
   </section>
 </main>
 
 <footer>
   <div class="footer-container">
-    <p>&copy; 2025 Atakan Altun. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="https://www.instagram.com/atakanaaltun/?igsh=ejdnYmxxNWtubjEx&utm_source=qr#" target="_blank">Instagram</a>
-      <a href="https://www.youtube.com/@atakanaaltun" target="_blank">YouTube</a>
-      <a href="mailto:aatakanaltun@gmail.com">Contact Me</a> 
-    </div>
+      <p id="footer-tm">&copy; 2025 Atakan Altun. All rights reserved.</p>
+      <div class="footer-links" id="photos-footer-links">
+          <a href="https://www.instagram.com/atakanaaltun/?igsh=ejdnYmxxNWtubjEx&utm_source=qr#" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/@atakanaaltun" target="_blank">YouTube</a>
+          <a href="mailto:aatakanaltun@gmail.com" id="contact-text-footer">Contact Me</a> 
+      </div>
   </div>
 </footer>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Slick Carousel JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- jQuery UI JS -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="videos.js"></script>
 </body>
 </html>
+
 
 

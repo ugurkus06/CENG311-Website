@@ -88,7 +88,7 @@ $(document).ready(function () {
             $("#dialog-message").html(`Teşekkürler <strong>${name}</strong>, ${email}</strong> adresine en kısa zamanda geri dönüş yapacağım!`);
         }
         else{
-            $("#dialog-message").html(`Thank you <strong>${name}</strong>, we will get back to you at <strong>${email}</strong> soon!`);
+            $("#dialog-message").html(`Thank you <strong>${name}</strong>, I will get back to you at <strong>${email}</strong> soon!`);
 
         }
         $("#dialog").dialog("open");

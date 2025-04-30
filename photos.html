@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atakan Altun</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <!-- LightSlider CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightslider@1.1.6/dist/css/lightslider.min.css" />
+   <!-- jQuery UI CSS -->
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="media/images/favicon.ico">
 </head>
@@ -17,11 +21,11 @@
     </a>
     <nav>
       <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="concerts.html">Concerts</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="photos.html">Photos</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" id="about-text">About</a></li>
+        <li><a href="concerts.html" id="concerts-text">Concerts</a></li>
+        <li><a href="videos.html" id="videos-text">Videos</a></li>
+        <li><a href="photos.html" id="photos-text">Photos</a></li>
+        <li><a href="contact.html" id="contact-text">Contact</a></li>        
       </ul>
     </nav>
     <div class="language-selector">
@@ -32,69 +36,41 @@
 </header>
 
 <main>
-  <!-- Image gallery container -->
-  <div class="gallery-container">
-    <!-- Previous image button -->
-    <button class="prev" onclick="prevImage()">&#10094;</button>
-     <!-- Main displayed image -->
-    <img src="media/images/IMG_1782.JPG" id="main-image">
-    <!-- Next image button -->
-    <button class="next" onclick="nextImage()">&#10095;</button>
-  </div>
-  <!-- Thumbnail image selection -->
-  <div class="thumbnail-container">
-    <img src="media/images/IMG_1769.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1769.JPG')">
-    <img src="media/images/IMG_1772.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1772.JPG')">
-    <img src="media/images/IMG_1990.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1990.JPG')">
-    <img src="media/images/IMG_1770.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1770.JPG')">
-    <img src="media/images/IMG_1782.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1782.JPG')">
-    <img src="media/images/IMG_1318.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1318.JPG')">
-    <img src="media/images/IMG_1773.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1773.JPG')">
-    <img src="media/images/IMG_1777.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1777.JPG')">
-    <img src="media/images/IMG_1781.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1781.JPG')">
-    <img src="media/images/IMG_1998.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_1998.JPG')">
-    <img src="media/images/IMG_2002.JPG" class="thumbnail" onclick="changeImage('media/images/IMG_2002.JPG')">
-  </div>
+  <ul id="imageGallery">
+    <li data-thumb="media/images/IMG_1769.JPG">
+      <img src="media/images/IMG_1769.JPG" />
+    </li>
+    <li data-thumb="media/images/IMG_1772.JPG">
+      <img src="media/images/IMG_1772.JPG" />
+    </li>
+    <li data-thumb="media/images/IMG_1990.JPG">
+      <img src="media/images/IMG_1990.JPG" />
+    </li>
+    <li data-thumb="media/images/IMG_1770.JPG">
+      <img src="media/images/IMG_1770.JPG" />
+    </li>
+    <li data-thumb="media/images/IMG_1782.JPG">
+      <img src="media/images/IMG_1782.JPG" />
+    </li>
+  </ul>
 </main>
 
 <footer>
   <div class="footer-container">
-    <p>&copy; 2025 Atakan Altun. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="https://www.instagram.com/atakanaaltun/?igsh=ejdnYmxxNWtubjEx&utm_source=qr#" target="_blank">Instagram</a>
-      <a href="https://www.youtube.com/@atakanaaltun" target="_blank">YouTube</a>
-      <a href="mailto:aatakanaltun@gmail.com">Contact Me</a> 
-    </div>
+      <p id="footer-tm">&copy; 2025 Atakan Altun. All rights reserved.</p>
+      <div class="footer-links" id="photos-footer-links">
+          <a href="https://www.instagram.com/atakanaaltun/?igsh=ejdnYmxxNWtubjEx&utm_source=qr#" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/@atakanaaltun" target="_blank">YouTube</a>
+          <a href="mailto:aatakanaltun@gmail.com" id="contact-text-footer">Contact Me</a> 
+      </div>
   </div>
 </footer>
+<!-- jQuery + LightSlider -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightslider@1.1.6/dist/js/lightslider.min.js"></script>
 
-<!--
-
----
-Due to sprint 2 tasks, we should only do the html and css parts. We will use this js code to give functionality to image gallery afterward.
----
-
-<script>
-  let images = ["media/images/IMG_1769.JPG", "media/images/IMG_1772.JPG", "media/images/IMG_1990.JPG", "media/images/IMG_1770.JPG", "media/images/IMG_1782.JPG"
-    , "media/images/IMG_1318.JPG", "media/images/IMG_1773.JPG", "media/images/IMG_1777.JPG", "media/images/IMG_1781.JPG"
-    , "media/images/IMG_1998.JPG", "media/images/IMG_2002.JPG", 
-  ];
-  let index = 0;
-
-  function changeImage(src) {
-    document.getElementById("main-image").src = src;
-  }
-
-  function prevImage() {
-    index = (index - 1 + images.length) % images.length;
-    document.getElementById("main-image").src = images[index];
-  }
-
-  function nextImage() {
-    index = (index + 1) % images.length;
-    document.getElementById("main-image").src = images[index];
-  }
-</script>
--->
+<!-- Custom JS -->
+<script src="photos.js"></script>
 </body>
 </html>
