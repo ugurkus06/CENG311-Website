@@ -35,10 +35,11 @@ header {
 
 /* Style the navigation */
 nav ul {
+    
     list-style: none;
     display: flex;
     gap: 20px; /* Space between links */
-    margin-left: 30%;
+    margin-left: 15%;
 }
 
 nav ul li {
@@ -132,7 +133,6 @@ footer {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 18px;
     align-items: center;
-
 }
 
 .language-selector a {
@@ -145,6 +145,7 @@ footer {
 .language-selector a:hover {
     color: #929397;
 }
+
 
 /* ================= Concerts Page Styling ================= */
 #concert-body {
