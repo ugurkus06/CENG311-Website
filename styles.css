@@ -283,3 +283,28 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+
+
+.ui-button {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* ================= Language Selector Styling ================= */
+.language-selector a {
+    color: #000;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+.language-selector a:hover {
+    color: #929397;
+}
+
+
+
