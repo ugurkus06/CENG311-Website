@@ -225,7 +225,7 @@ display: block;
     font-size: 20px;
     margin: 10px auto;
     max-width: 700px;
-    height: 200px;
+    height: 300px;
     padding: 10px 20px;
     text-align: center;
     overflow: hidden;
@@ -307,4 +307,44 @@ button {
 }
 
 
+/* Accordion header styling */
+.ui-accordion .ui-accordion-header {
+    background: #111; /* dark background for contrast */
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Hover effect */
+.ui-accordion .ui-accordion-header:hover {
+    background: #333;
+}
+
+/* Active header */
+.ui-accordion .ui-accordion-header.ui-state-active {
+    background: #444;
+}
+
+/* Accordion content panel */
+.ui-accordion .ui-accordion-content {
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 18px;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 16px;
+}
+
+/* Remove default jQuery UI icon */
+.ui-accordion .ui-accordion-header .ui-icon {
+    display: none;
+}
 
