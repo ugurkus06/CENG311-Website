@@ -1,0 +1,53 @@
+{
+  "upcoming": [
+    {
+      "date": "2025-05-10",
+      "location": "Ankara - CSO Ada Bankkart Mavi Salon",
+      "program": [
+        "Nikolai Rimsky-Korsakov – Şehrazat (Kontrbas ve Piyano için)",
+        "Düzenleme: Dominik Wagner",
+        "Giovanni Bottesini – Grande Allegro di Concerto ‘Alla Mendelssohn’",
+        "Stuart Sankey – Carmen Fantezisi",
+        "Doç. Dr. Sibel Sarıcan Gündüz"
+      ]
+    },
+    {
+      "date": "2025-05-16",
+      "location": "İzmir - Ahmet Adnan Saygun Sanat Merkezi, Büyük Salon",
+      "program": [
+        "Serge Koussevitzky – Fa Diyez Minör Kontrbas Konçertosu, Op. 3",
+        "İzmir Devlet Senfoni Orkestrası",
+        "Şef: Nesrin Bayramoğulları"
+      ]
+    }
+  ],
+  "previous": [
+    {
+      "date": "2024-05-17",
+      "location": "Adana - Adana Büyükşehir Belediyesi Tiyatro Salonu",
+      "program": [
+        "Serge Koussevitzky – Fa Diyez Minör Kontrbas Konçertosu, Op. 3",
+        "Çukurova Devlet Senfoni Orkestrası",
+        "Şef: Eray İnal"
+      ]
+    },
+    {
+      "date": "2023-12-26",
+      "location": "Ankara - Hacettepe Üniversitesi Ankara Devlet Konservatuvarı Resital Salonu",
+      "program": [
+        "Hans Fryba – Eski Tarzda Süit",
+        "Johannes Brahms – Mi Minör Viyolonsel Sonatı",
+        "Piyano: Doç. Dr. Sibel Sarıcan Gündüz"
+      ]
+    },
+    {
+      "date": "2023-11-30",
+      "location": "Ankara - Hacettepe Üniversitesi Ankara Devlet Konservatuvarı Konser Salonu",
+      "program": [
+        "Serge Koussevitzky – Fa Diyez Minör Kontrbas Konçertosu, Op. 3",
+        "Hacettepe Üniversitesi Senfoni Orkestrası",
+        "Şef: Bahadır Çokamay"
+      ]
+    }
+  ]
+}

@@ -347,4 +347,37 @@ button {
 .ui-accordion .ui-accordion-header .ui-icon {
     display: none;
 }
+/* Concert cards */
+.concert-card {
+    width: 300px;
+    background-color: #f8f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.concert-card .summary {
+    font-size: 1.1rem;
+}
+.concert-card .details {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+}
 
+.concerts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start; /* This prevents all cards from stretching equally */
+}
+.details {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #333;
+    display: none; /* hidden by default */
+}

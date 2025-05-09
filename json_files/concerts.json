@@ -1,0 +1,53 @@
+{
+  "upcoming": [
+    {
+      "date": "2025-05-10",
+      "location": "Ankara - CSO Ada Bankkart Blue Hall",
+      "program": [
+        "Nikolai Rimsky-Korsakov – Scheherazade (for Double Bass and Piano)",
+        "Arrangement: Dominik Wagner",
+        "Giovanni Bottesini – Grande Allegro di Concerto ‘Alla Mendelssohn’",
+        "Stuart Sankey – Carmen Fantasy",
+        "Assoc. Prof. Dr. Sibel Sarıcan Gündüz"
+      ]
+    },
+    {
+      "date": "2025-05-16",
+      "location": "İzmir - Ahmet Adnan Saygun Arts Center, Grand Hall",
+      "program": [
+        "Serge Koussevitzky – F# Minor Double Bass Concerto, Op. 3",
+        "İzmir State Symphony Orchestra",
+        "Conductor: Nesrin Bayramoğulları"
+      ]
+    }
+  ],
+  "previous": [
+    {
+      "date": "2024-05-17",
+      "location": "Adana - Adana Metropolitan Municipality Theatre Hall",
+      "program": [
+        "Serge Koussevitzky – F# Minor Double Bass Concerto, Op. 3",
+        "Çukurova State Symphony Orchestra",
+        "Conductor: Eray İnal"
+      ]
+    },
+    {
+      "date": "2023-12-26",
+      "location": "Ankara - Hacettepe University Ankara State Conservatory Recital Hall",
+      "program": [
+        "Hans Fryba – Suite in Olden Style",
+        "Johannes Brahms – Cello Sonata in E Minor",
+        "Piano: Assoc. Prof. Dr. Sibel Sarıcan Gündüz"
+      ]
+    },
+    {
+      "date": "2023-11-30",
+      "location": "Ankara - Hacettepe University Ankara State Conservatory Concert Hall",
+      "program": [
+        "Serge Koussevitzky – F# Minor Double Bass Concerto, Op. 3",
+        "Hacettepe University Symphony Orchestra",
+        "Conductor: Bahadır Çokamay"
+      ]
+    }
+  ]
+}
