@@ -45,7 +45,7 @@ $(function () {
     /*****************************************************************
      * 2. FETCH VIDEOS FROM YOUTUBE
      *****************************************************************/
-    const API_KEY   = "YOUR_KEY";
+    const API_KEY   = "AIzaSyAjmOEr_l5Ll8-CRu8L-vMDXQvsWh0r81Q";
     const CHANNELID = "UCKOabxG4StnhJOVA9xcl25Q";
     const MAX       = 3;
 
