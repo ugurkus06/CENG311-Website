@@ -1,4 +1,4 @@
-$(function () {
+$(function () { // videos are now loaded from google api
     
     $("#lang-tr, #lang-en").button();
     $(".language-selector").controlgroup();
@@ -24,7 +24,7 @@ $(function () {
             $("#desc2").html(`<h3>Concert Info</h3><div><p>R. Glière – Tarantella<br>Double-bass: Atakan Altun&nbsp;&nbsp;Piano: Evrim Turan</p></div>`);
         }
 
-        /* refresh accordion so the updated <div> tags are recognised */
+        // refresh accordion so the updated <div> tags are recognised 
         $(".video-desc.ui-accordion").accordion("refresh");
     }
 
@@ -55,25 +55,25 @@ $(function () {
         });
 
 
-    /** builds <div class="video-slide"> + <div class="video-desc"> */
+    // builds <div class="video-slide"> + <div class="video-desc">
     function addSlidesAndDescriptions(data) {
         data.items.forEach((item, idx) => {
             const videoId = item.id.videoId;
 
-            /* slide */
+            // slide
             $(".video-slider").append(
                 `<div class="video-slide">
                      <iframe src="https://www.youtube.com/embed/${videoId}"
                              allowfullscreen></iframe>
                  </div>`);
 
-            /* matching description, hidden by default */
+            // matching description, hidden by default 
             $("#video-descriptions").append(
                 `<div id="desc${idx}" class="video-desc" data-index="${idx}" style="display:none;"></div>`);
         });
     }
 
-    /** activates Slick and the first accordion, and wires afterChange */
+    // activates Slick and the first accordion, and wires afterChange 
     function initSliderAndAccordion() {
         $('.video-slider').slick({
             slidesToShow: 1,
@@ -85,18 +85,18 @@ $(function () {
             nextArrow: '<button type="button" class="slick-next">&#10095;</button>'
         });
 
-        /* show + accordion-ise the first description */
+        // show + accordion-ise the first description 
         $('.video-desc[data-index="0"]')
             .show()
             .accordion({ collapsible:true, active:0, heightStyle:"content" });
 
-        /* when slide changes, swap description & re-initialise accordion */
+        // when slide changes, swap description & re-initialise accordion 
         $('.video-slider').on('afterChange', function (e, slick, cur) {
             $('.video-desc').hide();
             let $cur = $('.video-desc[data-index="'+cur+'"]');
             $cur.fadeIn(0);
 
-            /* (re)apply accordion */
+            // (re)apply accordion
             $(".video-desc.ui-accordion").accordion("destroy");
             $cur.accordion({ collapsible:true, active:0, heightStyle:"content" });
         });
