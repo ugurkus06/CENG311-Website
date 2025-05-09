@@ -1,96 +1,111 @@
-$(document).ready(function () { // site now loads videos from youtube api instead of using iframe
+/* videos.js
+ * one self-contained, DOM-ready block
+ * needs jQuery, jQuery-UI, slick.min.js already loaded
+ */
+$(function () {
+    /*****************************************************************
+     * 1. LANGUAGE BUTTONS
+     *****************************************************************/
+    $("#lang-tr, #lang-en").button();
+    $(".language-selector").controlgroup();
 
+    let currentLang = "lang-en";   // default; will change on click
 
-    $("#lang-tr, #lang-en").button();            // turn into jQuery-UI buttons
-    $(".language-selector").controlgroup();      // group them
-
-    let currentLang = "lang-en";                 // default language
-
-    // one function that (re)writes all translatable text
     function applyTranslations(lang) {
         if (lang === "lang-tr") {
             $("#videos-title").text("Öne Çıkan Videolar");
-            $("#desc1").html(`<h3>Konser Bilgisi</h3><div><p>Atakan Altun - S. Koussevitzky Fa Diyez Minör Kontrbas Konçertosu (1. ve 2. bölümler)<br>Hacettepe Üniversitesi Senfoni Orkestrası<br>Şef: Bahadır Çokomay<br>Kontrbas: Atakan Altun<br>30.11.2023</p></div>`);
-            $("#desc2").html(`<h3>Konser Bilgisi</h3><div><p>R. Glière - Tarantella<br>Atakan Altun - Kontrbas<br>Evrim Turan - Piyano</p></div>`);
-            $("#desc3").html(`<h3>Konser Bilgisi</h3><div><p>Atakan Altun, Efil Özdemir - Bottesini Kontrbas Klarnet Gran Duo<br>Kontrbas: Atakan ALTUN<br>Klarnet: Efil ÖZDEMİR<br>Hacettepe Gençlik Senfoni Orkestrası</p></div>`);
             $("#footer-tm").text("2025 Atakan Altun. Tüm hakları saklıdır.");
             $("#contact-text-footer").text("Bana Ulaşın");
+
+            $("#desc0").html(`<h3>Konser Bilgisi</h3><div><p>Atakan Altun- Sarasate Zigeunerweisen<br>Kontrbas: Atakan Altun</p></div>`);
+            $("#desc1").html(`<h3>Konser Bilgisi</h3><div><p>S. Koussevitzky Fa Diyez Minör Kontrbas Konçertosu (I-II)<br>HÜ Senfoni Ork., Şef: Bahadır Çokomay</p></div>`);
+            $("#desc2").html(`<h3>Konser Bilgisi</h3><div><p>R. Glière - Tarantella<br>Kontrbas: Atakan Altun&nbsp;&nbsp;Piyano: Evrim Turan</p></div>`);
         } else {
             $("#videos-title").text("Featured Videos");
-            $("#desc1").html(`<h3>Concert Info</h3><div><p>Atakan Altun - S. Koussevitzky Double-bass Concerto in F# Minor (1st & 2nd movements)<br>Hacettepe University Symphony Orchestra<br>Conductor: Bahadır Çokomay<br>Double-bass: Atakan Altun<br>30 Nov 2023</p></div>`);
-            $("#desc2").html(`<h3>Concert Info</h3><div><p>R. Glière - Tarantella<br>Atakan Altun - Double-bass<br>Evrim Turan - Piano</p></div>`);
-            $("#desc3").html(`<h3>Concert Info</h3><div><p>Atakan Altun, Efil Özdemir - Bottesini Double-bass Clarinet Gran Duo<br>Double-bass: Atakan ALTUN<br>Clarinet: Efil ÖZDEMİR<br>Hacettepe Youth Symphony Orchestra</p></div>`);
             $("#footer-tm").text("2025 Atakan Altun. All rights reserved.");
             $("#contact-text-footer").text("Contact Me");
+
+            $("#desc0").html(`<h3>Concert Info</h3><div><p>Atakan Altun – Sarasate Zigeunerweisen<br>Double-bass: Atakan Altun</p></div>`);
+            $("#desc1").html(`<h3>Concert Info</h3><div><p>S. Koussevitzky Double-bass Concerto in F♯ minor (I-II)<br>Hacettepe Univ. Symphony, cond. Bahadır Çokomay</p></div>`);
+            $("#desc2").html(`<h3>Concert Info</h3><div><p>R. Glière – Tarantella<br>Double-bass: Atakan Altun&nbsp;&nbsp;Piano: Evrim Turan</p></div>`);
         }
 
-        
-        $("#desc1,#desc2,#desc3").accordion?.("refresh");
+        /* refresh accordion so the updated <div> tags are recognised */
+        $(".video-desc.ui-accordion").accordion("refresh");
     }
 
-    // click handler toggles active state & reapplies text
     $(".language-selector a").on("click", function (e) {
         e.preventDefault();
         $(".language-selector a").removeClass("ui-state-active");
         $(this).addClass("ui-state-active");
-        currentLang = this.id;               // "lang-tr" or "lang-en"
+        currentLang = this.id;
         applyTranslations(currentLang);
-    });  
-  
-  
-  const API_KEY = 'AIzaSyAjmOEr_l5Ll8-CRu8L-vMDXQvsWh0r81Q';  // the api key was restricted to be only usable in this website 
-                                                                // which makes it protected
-    const CHANNEL_ID = 'UCKOabxG4StnhJOVA9xcl25Q';
-    const MAX_RESULTS = 3;
-  
-    const videoSlider = $('.video-slider');
-    const videoDescriptions = $('#video-descriptions');
-  
-    $.ajax({
-      url: `https://www.googleapis.com/youtube/v3/search`,
-      method: 'GET',
-      data: {
-        key: API_KEY,
-        channelId: CHANNEL_ID,
-        part: 'snippet',
-        order: 'date',
-        maxResults: MAX_RESULTS,
-        type: 'video'
-      },
-      success: function (response) {
-        response.items.forEach((item, index) => {
-          const videoId = item.id.videoId;
-          const title = item.snippet.title;
-          const description = item.snippet.description;
-          const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-  
-          // Add video iframe to slider
-          videoSlider.append(`
-            <div>
-              <iframe src="${embedUrl}" allowfullscreen></iframe>
-            </div>
-          `);
-  
-          // Add video description
-          videoDescriptions.append(`
-            <div class="video-desc" data-index="${index}" ${index > 0 ? 'style="display:none;"' : ''}>
-              <h3>${title}</h3>
-              <div>
-                <p>${description}</p>
-              </div>
-            </div>
-          `);
-        });
-  
-        // Optional: initialize slick slider if needed
-        $('.video-slider').slick();
-      },
-      error: function () {
-        console.error('Failed to fetch videos from YouTube API');
-      }
     });
 
+    /*****************************************************************
+     * 2. FETCH VIDEOS FROM YOUTUBE
+     *****************************************************************/
+    const API_KEY   = "YOUR_KEY";
+    const CHANNELID = "UCKOabxG4StnhJOVA9xcl25Q";
+    const MAX       = 3;
 
+    fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNELID}&part=snippet&order=date&maxResults=${MAX}&type=video`)
+        .then(r => r.ok ? r.json() : Promise.reject(r))
+        .then(addSlidesAndDescriptions)          // <- create markup first
+        .then(initSliderAndAccordion)           // <- then activate plugins
+        .then(() => applyTranslations(currentLang)) // <- finally translate
+        .catch(err => {
+            console.error("YouTube API error", err);
+            $(".video-slider").text("Could not load videos 😞");
+        });
 
-  });
-  
+    /*****************************************************************
+     * 3. HELPERS
+     *****************************************************************/
+    /** builds <div class="video-slide"> + <div class="video-desc"> */
+    function addSlidesAndDescriptions(data) {
+        data.items.forEach((item, idx) => {
+            const videoId = item.id.videoId;
+
+            /* slide */
+            $(".video-slider").append(
+                `<div class="video-slide">
+                     <iframe src="https://www.youtube.com/embed/${videoId}"
+                             allowfullscreen></iframe>
+                 </div>`);
+
+            /* matching description, hidden by default */
+            $("#video-descriptions").append(
+                `<div id="desc${idx}" class="video-desc" data-index="${idx}" style="display:none;"></div>`);
+        });
+    }
+
+    /** activates Slick and the first accordion, and wires afterChange */
+    function initSliderAndAccordion() {
+        $('.video-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: true,
+            adaptiveHeight: true,
+            prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+            nextArrow: '<button type="button" class="slick-next">&#10095;</button>'
+        });
+
+        /* show + accordion-ise the first description */
+        $('.video-desc[data-index="0"]')
+            .show()
+            .accordion({ collapsible:true, active:0, heightStyle:"content" });
+
+        /* when slide changes, swap description & re-initialise accordion */
+        $('.video-slider').on('afterChange', function (e, slick, cur) {
+            $('.video-desc').hide();
+            let $cur = $('.video-desc[data-index="'+cur+'"]');
+            $cur.fadeIn(0);
+
+            /* (re)apply accordion */
+            $(".video-desc.ui-accordion").accordion("destroy");
+            $cur.accordion({ collapsible:true, active:0, heightStyle:"content" });
+        });
+    }
+});
