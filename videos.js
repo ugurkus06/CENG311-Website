@@ -1,11 +1,5 @@
-/* videos.js
- * one self-contained, DOM-ready block
- * needs jQuery, jQuery-UI, slick.min.js already loaded
- */
 $(function () {
-    /*****************************************************************
-     * 1. LANGUAGE BUTTONS
-     *****************************************************************/
+    
     $("#lang-tr, #lang-en").button();
     $(".language-selector").controlgroup();
 
@@ -42,10 +36,7 @@ $(function () {
         applyTranslations(currentLang);
     });
 
-    /*****************************************************************
-     * 2. FETCH VIDEOS FROM YOUTUBE
-     *****************************************************************/
-    const API_KEY   = "AIzaSyAjmOEr_l5Ll8-CRu8L-vMDXQvsWh0r81Q";
+    const API_KEY   = "AIzaSyAjmOEr_l5Ll8-CRu8L-vMDXQvsWh0r81Q"; // restricted access out of this site so it should be relatively safe to post it publicly
     const CHANNELID = "UCKOabxG4StnhJOVA9xcl25Q";
     const MAX       = 3;
 
@@ -56,12 +47,14 @@ $(function () {
         .then(() => applyTranslations(currentLang)) // <- finally translate
         .catch(err => {
             console.error("YouTube API error", err);
+            
+            if (currentLang == "lang-tr")
+                $(".video-slider").text("Videolar yüklenemedi 😞");
+            else
             $(".video-slider").text("Could not load videos 😞");
         });
 
-    /*****************************************************************
-     * 3. HELPERS
-     *****************************************************************/
+
     /** builds <div class="video-slide"> + <div class="video-desc"> */
     function addSlidesAndDescriptions(data) {
         data.items.forEach((item, idx) => {
